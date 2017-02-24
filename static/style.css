@@ -12,7 +12,7 @@ font-family: 'Open Sans', sans-serif;
 
 .card {
 	border: 1px solid #a9a9a9;
-	width: 300px;
+	min-width: calc(90% / 5)
 	padding: 20px;
 	box-sizing: border-box;
 }
@@ -23,24 +23,24 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .col.extNeg {
-	left: 0;
+	left: 5%;
 	
 }
 
 .col.neg {
-	left: 300px;
+	left: calc(90% / 5);
 }
 
 .col.neu {
-	left: 600px;
+	left: calc(90% / 5 * 2);
 }
 
 .col.pos {
-	left: 900px;
+	left: calc(90% / 5 * 3)
 }
 
 
 .col.extPos {
-	left: 1200px;
+	left: calc(90% / 5 * 4)
 }
 
