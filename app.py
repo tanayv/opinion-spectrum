@@ -49,7 +49,7 @@ def trimData(y):
 
 		
 		#Reach/Influence Rating
-		spectrum[i][9] = (0.5 * int(spectrum[i][4])) + (1 * int(spectrum[i][5])) + (1.5 * int(spectrum[i][5]))
+		spectrum[i][9] = (0.1 * int(spectrum[i][4])) + (1 * int(spectrum[i][5])) + (1.2 * int(spectrum[i][5]))
 
 				
 	return spectrum
@@ -77,19 +77,19 @@ def visualize(spectrum):
 
 		rel = spectrum[i][7]
 
-		if (rel >= -1 and rel < -0.1):
+		if (rel >= -1 and rel < -0.2):
 			extNeg.append(info)
 
-		elif (rel >= -0.1 and rel < 0.2):
+		elif (rel >= -0.2 and rel < -0.01):
 			neg.append(info)
 
-		elif (rel >= 0.2 and rel < 0.4):
+		elif (rel >= -0.01 and rel < 0.1):
 			neu.append(info)	
 
-		elif (rel >= 0.4 and rel < 0.8):
+		elif (rel >= 0.1 and rel < 0.5):
 			pos.append(info)
 
-		elif (rel >= 0.8):
+		elif (rel >= 0.5):
 			extPos.append(info)
 
 	#CHECK SORTING 
@@ -123,14 +123,14 @@ def visualize(spectrum):
 	
 	for card in extNeg:
 		i = card[0]
-		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
+		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<hr>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
 		str1 += strCD	
 	str1 += "</div>"	 
 
 	str1 += "<div class='col neg'> <div class='card'><b>Negative</b></div>"
 	for card in neg:
 		i = card[0]
-		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
+		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<hr>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
 		str1 += strCD	
 	str1 += "</div>"	 
 	
@@ -138,7 +138,7 @@ def visualize(spectrum):
 	str1 += "<div class='col neu'> <div class='card'><b>Neutral</b></div>"	
 	for card in neu:
 		i = card[0]
-		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
+		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<hr>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
 		str1 += strCD	
 	str1 += "</div>"
 
@@ -146,14 +146,14 @@ def visualize(spectrum):
 	str1 += "<div class='col pos'> <div class='card'><b>Positive</b></div>"	
 	for card in pos:
 		i = card[0]
-		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
+		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<hr>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
 		str1 += strCD	
 	str1 += "</div>"
 
 	str1 += "<div class='col extPos'> <div class='card'><b>Extremely Positive</b></div>"	
 	for card in extPos:
 		i = card[0]
-		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
+		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<hr>Sentiment: " + str(spectrum[i][7]) + "<br>Reach Estimate: " + str(spectrum[i][9]) + "</div>"
 		str1 += strCD	
 	str1 += "</div>"	 
 	 

@@ -83,7 +83,13 @@ b {
 	height: 50px;
 	font-size: 1.4em;
 	line-height: 50px;
+	box-sizing: border-box;
 }
 
+hr {
+	margin-top: 12px;
+    background-color: #ececec;
+    border: 1px solid #ececec;
+}
 
 

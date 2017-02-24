@@ -76,7 +76,15 @@ class TwitterObj:
 			#URL 3 -> NASA
 			url3 = "https://api.twitter.com/1.1/search/tweets.json?q=NASA&result_type=popular"
 
-			r = requests.get(url=url1, auth=oauth)
+
+			#URL 4 -> q = abortion			
+			url4 = "https://api.twitter.com/1.1/search/tweets.json?q=abortion&result_type=popular"
+
+
+			#URL 5 -> Donald Trump's Tweets
+			url5 = "https://api.twitter.com/1.1/search/tweets.json?q=from%3ArealDonaldTrump"
+
+			r = requests.get(url=url5, auth=oauth)
 			return r.json()
 	
 
