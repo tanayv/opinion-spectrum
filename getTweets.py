@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 import requests
 from requests_oauthlib import OAuth1
 from urlparse import parse_qs
+import unicodedata
+import json
 
 class TwitterObj:
 
@@ -62,7 +64,7 @@ class TwitterObj:
 			print
 		else:
 			oauth = self.get_oauth()
-			r = requests.get(url="https://api.twitter.com/1.1/statuses/mentions_timeline.json?count=1", auth=oauth)
+			r = requests.get(url="https://api.twitter.com/1.1/statuses/mentions_timeline.json?count=21", auth=oauth)
 			return r.json()
 	
 
