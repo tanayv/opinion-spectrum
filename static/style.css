@@ -24,6 +24,11 @@ b {
 	border-radius: 3px;
 }
 
+.col .card:first-child {
+	border: none;
+	text-align: center;
+}
+
 .col {
 	top: 70px;
 	position: absolute;
@@ -32,8 +37,28 @@ b {
 
 .col.extNeg {
 	left: 5%;
-	
 }
+
+.col.extNeg .card:not(:first-child) {
+	border-bottom: 2px solid #E65100;
+}
+
+.col.neg .card:not(:first-child) {
+	border-bottom: 2px solid #FB8C00;
+}
+
+.col.neu .card:not(:first-child) {
+	border-bottom: 2px solid #FFEB3B;
+}
+
+.col.pos .card:not(:first-child) {
+	border-bottom: 2px solid #4CAF50;
+}
+
+.col.extPos .card:not(:first-child) {
+	border-bottom: 2px solid #00C853;
+}
+
 
 .col.neg {
 	left: calc(90% / 5 + 5%);
@@ -47,8 +72,18 @@ b {
 	left: calc(90% / 5 * 3 + 5%)
 }
 
-
 .col.extPos {
 	left: calc(90% / 5 * 4  + 5%)
 }
+
+.nav {
+	width: 100%;
+	border-bottom: 1px solid #9E9E9E;
+	padding: 0% 5% 0% 5%;
+	height: 50px;
+	font-size: 1.4em;
+	line-height: 50px;
+}
+
+
 

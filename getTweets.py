@@ -65,7 +65,17 @@ class TwitterObj:
 			print
 		else:
 			oauth = self.get_oauth()
+			
+			#URL 1 -> q = transgender			
 			url1 = "https://api.twitter.com/1.1/search/tweets.json?q=transgender&result_type=popular"
+
+			#URL 2 -> q = #MuslimBan from 18 Jan to 18 Feb
+			url2 = "https://api.twitter.com/1.1/search/tweets.json?q=%23MuslimBan%20since%3A2017-01-18%20until%3A2017-02-18&result_type=popular"
+
+
+			#URL 3 -> NASA
+			url3 = "https://api.twitter.com/1.1/search/tweets.json?q=NASA&result_type=popular"
+
 			r = requests.get(url=url1, auth=oauth)
 			return r.json()
 	
