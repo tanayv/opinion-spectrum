@@ -18,8 +18,8 @@ def homeDisp():
 
 
 def trimData(y):
-	spectrum = [[0 for xMax in range(10)] for yMax in range(20)]
-	for i in range(0, 20):
+	spectrum = [[0 for xMax in range(10)] for yMax in range(14)]
+	for i in range(0, 14):
 		spectrum[i][0] = y["statuses"][i]["text"]
 		spectrum[i][1] = y["statuses"][i]["user"]["name"]
 		spectrum[i][2] = y["statuses"][i]["user"]["screen_name"]
@@ -69,7 +69,7 @@ def visualize(spectrum):
 
 
 	#loop through the spectrum
-	for i in range(0, 20):
+	for i in range(0, 14):
 	
 		#append i and reliability value to interval
 		info = []

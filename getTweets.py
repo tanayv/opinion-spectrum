@@ -65,7 +65,7 @@ class TwitterObj:
 			print
 		else:
 			oauth = self.get_oauth()
-			url1 = "https://api.twitter.com/1.1/search/tweets.json?q=transgender&result_type=popular&count=21"
+			url1 = "https://api.twitter.com/1.1/search/tweets.json?q=transgender&result_type=popular"
 			r = requests.get(url=url1, auth=oauth)
 			return r.json()
 	
