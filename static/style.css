@@ -1,4 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
 html, body {
 	margin: 0;
 	padding: 0;
 }
+
+* {
+font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+	border: 1px solid #a9a9a9;
+	width: 300px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.col {
+	top: 0;
+	position: absolute;
+}
+
+.col.extNeg {
+	left: 0;
+	
+}
+
+.col.neg {
+	left: 300px;
+}
+
+.col.neu {
+	left: 600px;
+}
+
+.col.pos {
+	left: 900px;
+}
+
+
+.col.extPos {
+	left: 1200px;
+}
+

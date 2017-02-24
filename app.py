@@ -120,14 +120,15 @@ def visualize(spectrum):
 	#RENDERING
 	str1 = "<div class='grid'>"
 
-	str1 += "<div class='col extNeg'>"	
+	str1 += "<div class='col extNeg'> <div class='card'><b>Extremely Negative</b></div>"
+	
 	for card in extNeg:
 		i = card[0]
 		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reliability: " + str(spectrum[i][8]) + "</div>"
 		str1 += strCD	
 	str1 += "</div>"	 
 
-	str1 += "<div class='col extNeg'>"
+	str1 += "<div class='col neg'> <div class='card'><b>Negative</b></div>"
 	for card in neg:
 		i = card[0]
 		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reliability: " + str(spectrum[i][8]) + "</div>"
@@ -135,7 +136,7 @@ def visualize(spectrum):
 	str1 += "</div>"	 
 	
 
-	str1 += "<div class='col neu'>"	
+	str1 += "<div class='col neu'> <div class='card'><b>Neutral</b></div>"	
 	for card in neu:
 		i = card[0]
 		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reliability: " + str(spectrum[i][8]) + "</div>"
@@ -143,14 +144,14 @@ def visualize(spectrum):
 	str1 += "</div>"
 
 	
-	str1 += "<div class='col pos'>"	
+	str1 += "<div class='col pos'> <div class='card'><b>Positive</b></div>"	
 	for card in pos:
 		i = card[0]
 		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reliability: " + str(spectrum[i][8]) + "</div>"
 		str1 += strCD	
 	str1 += "</div>"
 
-	str1 += "<div class='col extPos'>"	
+	str1 += "<div class='col extPos'> <div class='card'><b>Extremely Positive</b></div>"	
 	for card in extPos:
 		i = card[0]
 		strCD = "<div class='card'><b>" + spectrum[i][1] + "</b><i>@" + spectrum[i][2] + "</i><br>" + spectrum[i][0] + "<br>Sentiment: " + str(spectrum[i][7]) + "<br>Reliability: " + str(spectrum[i][8]) + "</div>"
