@@ -20,17 +20,17 @@ def homeDisp():
 def trimData(y):
 	spectrum = [[0 for xMax in range(10)] for yMax in range(20)]
 	for i in range(0, 20):
-		spectrum[i][0] = y[i]["text"]
-		spectrum[i][1] = y[i]["user"]["name"]
-		spectrum[i][2] = y[i]["user"]["screen_name"]
-		spectrum[i][3] = y[i]["user"]["verified"]		
-		spectrum[i][4] = y[i]["user"]["followers_count"]		
-		spectrum[i][5] = y[i]["favorite_count"]
-		spectrum[i][6] = y[i]["retweet_count"]
+		spectrum[i][0] = y["statuses"][i]["text"]
+		spectrum[i][1] = y["statuses"][i]["user"]["name"]
+		spectrum[i][2] = y["statuses"][i]["user"]["screen_name"]
+		spectrum[i][3] = y["statuses"][i]["user"]["verified"]		
+		spectrum[i][4] = y["statuses"][i]["user"]["followers_count"]		
+		spectrum[i][5] = y["statuses"][i]["favorite_count"]
+		spectrum[i][6] = y["statuses"][i]["retweet_count"]
 
 		#Sentiment Analysis with weightage calculation for polarity and subjectivity
 		wiki = TextBlob(spectrum[i][0])
-		spectrum[i][7] = wiki.sentiment.polarity + (1 + 0.5*wiki.sentiment.subjectivity)
+		spectrum[i][7] = wiki.sentiment.polarity * (1 + 0.5*wiki.sentiment.subjectivity)
 		
 		#Reliability Rating
 		if spectrum[i][3] == True:
@@ -93,12 +93,12 @@ def visualize(spectrum):
 		elif (rel >= 1.4):
 			extPos.append(info)
 
-
-	print "Extremely Negative: " + str(extNeg)			
-	print "Negative: " + str(neg)
-	print "Neutral: " + str(neu)
-	print "Positive: " + str(pos)
-	print "Extremely Positive: " + str(extPos)
+	#CHECK SORTING 
+	#print "Extremely Negative: " + str(extNeg)			
+	#print "Negative: " + str(neg)
+	#print "Neutral: " + str(neu)
+	#print "Positive: " + str(pos)
+	#print "Extremely Positive: " + str(extPos)
 
 
 	extNeg.sort(key = lambda x:info[1])
@@ -107,13 +107,13 @@ def visualize(spectrum):
 	pos.sort(key = lambda x:info[1])
 	extPos.sort(key = lambda x:info[1])
 
-	print "-------------------------------- After Sorting"
+	#print "-------------------------------- After Sorting"
 	 
-	print "Extremely Negative: " + str(extNeg)			
-	print "Negative: " + str(neg)
-	print "Neutral: " + str(neu)
-	print "Positive: " + str(pos)
-	print "Extremely Positive: " + str(extPos)
+	#print "Extremely Negative: " + str(extNeg)			
+	#print "Negative: " + str(neg)
+	#print "Neutral: " + str(neu)
+	#print "Positive: " + str(pos)
+	#print "Extremely Positive: " + str(extPos)
 
 
 

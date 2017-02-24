@@ -12,14 +12,18 @@ font-family: 'Open Sans', sans-serif;
 
 .card {
 	border: 1px solid #a9a9a9;
-	min-width: calc(90% / 5)
+	width: 98%;
 	padding: 20px;
 	box-sizing: border-box;
+	font-size: 0.8em;
+	margin-bottom: 7px;
+	border-radius: 4px;
 }
 
 .col {
-	top: 0;
+	top: 70px;
 	position: absolute;
+	width: calc(90% / 5);
 }
 
 .col.extNeg {
@@ -28,19 +32,19 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .col.neg {
-	left: calc(90% / 5);
+	left: calc(90% / 5 + 5%);
 }
 
 .col.neu {
-	left: calc(90% / 5 * 2);
+	left: calc(90% / 5 * 2 + 5% );
 }
 
 .col.pos {
-	left: calc(90% / 5 * 3)
+	left: calc(90% / 5 * 3 + 5%)
 }
 
 
 .col.extPos {
-	left: calc(90% / 5 * 4)
+	left: calc(90% / 5 * 4  + 5%)
 }
 
