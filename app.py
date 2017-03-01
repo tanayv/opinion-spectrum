@@ -9,10 +9,17 @@ from getTweets import *
 
 app = Flask(__name__)
 
+
 @app.route('/')
+def begin():
+	return render_template('start.html')
+
+
+@app.route('/create')
 def homeDisp():
+	query = request.args.get('query')
 	x = TwitterObj()
-	y = x.getTweets()
+	y = x.getTweets(query)
 	z = trimData(y)
 	return render_template('main.html', grid=visualize(z))
 
@@ -107,7 +114,6 @@ def visualize(spectrum):
 	extPos.sort(key = lambda x:info[1])
 
 	#print "-------------------------------- After Sorting"
-	 
 	#print "Extremely Negative: " + str(extNeg)			
 	#print "Negative: " + str(neg)
 	#print "Neutral: " + str(neu)
