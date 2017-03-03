@@ -56,7 +56,7 @@ class TwitterObj:
 					resource_owner_secret=self.OAUTH_TOKEN_SECRET)
 		return oauth
 
-	def getTweets(self, query):
+	def getTweets(self, query, type):
 	
 		if not self.OAUTH_TOKEN:
 			token, secret = self.setup_oauth()
@@ -67,22 +67,7 @@ class TwitterObj:
 			oauth = self.get_oauth()
 			
 			#URL 1 -> q = transgender			
-			url1 = "https://api.twitter.com/1.1/search/tweets.json?q=" + query + "&result_type=popular"
-
-			#URL 2 -> q = #MuslimBan from 18 Jan to 18 Feb
-			url2 = "https://api.twitter.com/1.1/search/tweets.json?q=%23MuslimBan%20since%3A2017-01-18%20until%3A2017-02-18&result_type=popular"
-
-
-			#URL 3 -> NASA
-			url3 = "https://api.twitter.com/1.1/search/tweets.json?q=NASA&result_type=popular"
-
-
-			#URL 4 -> q = abortion			
-			url4 = "https://api.twitter.com/1.1/search/tweets.json?q=abortion&result_type=popular"
-
-
-			#URL 5 -> Donald Trump's Tweets
-			url5 = "https://api.twitter.com/1.1/search/tweets.json?q=from%3ArealDonaldTrump"
+			url1 = "https://api.twitter.com/1.1/search/tweets.json?q=" + query + "%20from%3Anytimes%2C%20OR%20from%3Afoxnews%2C%20OR%20from%3Acnnpolitics%2C%20OR%20from%3Abreitbartnews%2C%20OR%20from%3Atheblaze&count=15"
 
 			r = requests.get(url=url1, auth=oauth)
 			return r.json()

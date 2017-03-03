@@ -39,24 +39,8 @@ b {
 	left: 5%;
 }
 
-.col.extNeg .card:not(:first-child) {
-	border-bottom: 2px solid #E65100;
-}
-
-.col.neg .card:not(:first-child) {
-	border-bottom: 2px solid #FB8C00;
-}
-
-.col.neu .card:not(:first-child) {
-	border-bottom: 2px solid #FFEB3B;
-}
-
-.col.pos .card:not(:first-child) {
-	border-bottom: 2px solid #4CAF50;
-}
-
-.col.extPos .card:not(:first-child) {
-	border-bottom: 2px solid #00C853;
+.col .card:not(:first-child) {
+	border-bottom: 2px solid #000;
 }
 
 
@@ -90,6 +74,17 @@ hr {
 	margin-top: 12px;
     background-color: #ececec;
     border: 1px solid #ececec;
+}
+
+.card .redBox {
+	width: 100%;
+	background-color: #C62828;
+	height: 10px;
+}
+
+.card .redBox .blueBox {
+	background-color: #3F51B5;
+	height: 10px;
 }
 
 
