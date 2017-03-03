@@ -5,7 +5,6 @@ flask
 # tensorflow
 requests_oauthlib
 textblob
-textblob.classifiers
 ntlk
 
 
